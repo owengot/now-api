@@ -38,7 +38,7 @@ const server = app.listen(PORT, function() {
   console.log('This is a test')
 });
 
-const socketio = require("socket.io")(server);
+const socketio = require("socket.io")(server, { origins: '*:*'});
 
 // bot = new Bot(token, { polling: true });
 
