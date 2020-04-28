@@ -35,7 +35,7 @@ const PORT = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 const server = app.listen(PORT, function() {
   console.log(`Listening on Port ${PORT}`);
