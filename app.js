@@ -15,12 +15,6 @@ var cors = {
   default: "https://now.edgeryders.eu"
 }
 
-app.all('*', function(req, res, next) {
-  var origin = cors.origin.indexOf(req.header('origin').toLowerCase()) > -1 ? req.headers.origin : cors.default;
-  res.header("Access-Control-Allow-Origin", origin);
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
 // const token = process.env.TOKEN;
 const token = "974617027:AAED_Wl1IKBFfsOH17f-dwzuuPk2QGG3qNk";
 // 925199314:AAFkbcXUJLnF1S_w1GGZHcfh92ArHYxNJJE
@@ -36,7 +30,14 @@ const PORT = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+
+app.all('*', function(req, res, next) {
+  var origin = cors.origin.indexOf(req.header('origin').toLowerCase()) > -1 ? req.headers.origin : cors.default;
+  res.header("Access-Control-Allow-Origin", origin);
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 const server = app.listen(PORT, function() {
   console.log(`Listening on Port ${PORT}`);
