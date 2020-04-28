@@ -9,9 +9,16 @@ var request = require("request");
 // let bot;
 var http = require("http");
 var cors = require("cors");
+var whitelist = ['https://now.edgeryders.eu', 'http://localhost:8080']
+
 var corsOptions = {
-  origin: 'https://now.edgeryders.eu',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
 }
 // const token = process.env.TOKEN;
 const token = "974617027:AAED_Wl1IKBFfsOH17f-dwzuuPk2QGG3qNk";
