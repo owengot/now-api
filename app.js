@@ -32,9 +32,9 @@ const app = express();
 app.use(express.json());
 
 
-app.all('*', function(req, res, next) {
-  var origin = cors.origin.indexOf(req.header('origin').toLowerCase()) > -1 ? req.headers.origin : cors.default;
-  res.header("Access-Control-Allow-Origin", origin);
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
