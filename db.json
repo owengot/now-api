@@ -1,0 +1,145 @@
+{
+  "messages": [
+    {
+      "text": "Welcome to the chat.",
+      "time": 1576860136544,
+      "type": "text",
+      "channel": "1451",
+      "from": 4067,
+      "id": "GNaK_QL7"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "test11",
+      "url": "https://edgeryders.daily.co/test11",
+      "created": "2020-03-18T16:15:07.920Z"
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "public",
+      "access": "all"
+    },
+    {
+      "id": 2,
+      "name": "members",
+      "access": "members"
+    },
+    {
+      "name": "Admins",
+      "members": [
+        5,
+        3622,
+        4,
+        2915,
+        3
+      ],
+      "id": "904GvXHd"
+    }
+  ],
+  "channels": [
+    {
+      "id": "1387",
+      "name": "campfire",
+      "post_to": "https://edgeryders.eu/c/campfire",
+      "theme": {
+        "color": "#BF1E2D",
+        "icon": ""
+      },
+      "access": 2,
+      "description": "This is the default channel for all new members.",
+      "active": true
+    },
+    {
+      "id": "1451",
+      "name": "econscifi",
+      "post_to": "https://edgeryders.eu/c/earthos/sci-fi-economics",
+      "theme": {
+        "color": "#BF1E2D",
+        "icon": ""
+      },
+      "access": "904GvXHd",
+      "description": "Economists, politicians and business leaders, it seems, have given up on trying to imagine completely different economic systems. But we have not. And neither has a small group of brainy, visionary science fiction authors: Cory Doctorow (peer production and abundance in Walkaway), Bruce Sterling (nomads + cheap open source technology + reputation servers in Distraction), Neal Stephenson (phyla in The Diamond Age), Peter Watts (tons of insights from biology in the Rifters trilogy), and others. We organize a meeting of minds where we can learn from each other what future economies might look like. And maybe even how we can help them being born.",
+      "active": true
+    },
+    {
+      "id": "1459",
+      "name": "festival",
+      "post_to": "https://edgeryders.eu/c/campfire/festival",
+      "theme": {
+        "color": "#BF1E2D",
+        "icon": ""
+      },
+      "access": "904GvXHd",
+      "description": "This is the space where we organise this years edition of our annual community gathering.",
+      "active": true
+    },
+    {
+      "id": "test12",
+      "name": "test12",
+      "url": "https://edgeryders.daily.co/test12",
+      "theme": {
+        "color": "#BF1E2D",
+        "icon": ""
+      },
+      "created": "2020-03-18T16:26:27.841Z",
+      "access": true,
+      "active": true
+    },
+    {
+      "id": "test15",
+      "name": "test15",
+      "call_url": "https://edgeryders.daily.co/test15",
+      "theme": {
+        "color": null,
+        "icon": ""
+      },
+      "created": "2020-03-18T16:28:46.951Z",
+      "access": true,
+      "active": true
+    }
+  ],
+  "users": [
+    {
+      "id": 4067,
+      "telegram": [
+        {
+          "id": 742359389,
+          "verified": true
+        },
+        {
+          "id": 860705048,
+          "verified": true
+        }
+      ],
+      "avatar": "https://communities.edgeryders.eu/uploads/communities/original/2X/c/ca99fa7ffb0b1d3b41748261eed8f667656e2697.jpg",
+      "email": "owengot@gmail.com",
+      "username": "owen",
+      "favourites": [],
+      "bookmarks": [
+        "1451"
+      ],
+      "notifications": [],
+      "mentions": [],
+      "replies": [],
+      "created": 1575856366978
+    },
+    {
+      "username": "owen_test",
+      "id": 6591,
+      "avatar": "https://communities.edgeryders.eu/uploads/communities/original/2X/4/41775b1bc68f425eb99184820b1feeeb09197c7a.jpeg",
+      "favourites": [],
+      "bookmarks": [
+        "1387"
+      ],
+      "notifications": [
+        "1451"
+      ],
+      "mentions": [],
+      "replies": [],
+      "created": 1575856366978
+    }
+  ]
+}
