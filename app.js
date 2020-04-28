@@ -11,7 +11,7 @@ var http = require("http");
 var cors = require("cors");
 
 var cors = {
-  origin: ["https://now.edgeryders.eu","http://localhost:8080"],
+  origin: ["https://now.edgeryders.eu", "https://now.edgeryders.eu/", "http://localhost:8080"],
   default: "https://now.edgeryders.eu"
 }
 
