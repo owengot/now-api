@@ -8,12 +8,6 @@ var request = require("request");
 
 // let bot;
 var http = require("http");
-var cors = require("cors");
-
-var cors = {
-  origin: ["https://now.edgeryders.eu", "https://now.edgeryders.eu/", "http://localhost:8080"],
-  default: "https://now.edgeryders.eu"
-}
 
 // const token = process.env.TOKEN;
 const token = "974617027:AAED_Wl1IKBFfsOH17f-dwzuuPk2QGG3qNk";
