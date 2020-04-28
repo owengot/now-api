@@ -9,6 +9,10 @@ var request = require("request");
 // let bot;
 var http = require("http");
 var cors = require("cors");
+var corsOptions = {
+  origin: 'https://now.edgeryders.eu',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 // const token = process.env.TOKEN;
 const token = "974617027:AAED_Wl1IKBFfsOH17f-dwzuuPk2QGG3qNk";
 // 925199314:AAFkbcXUJLnF1S_w1GGZHcfh92ArHYxNJJE
@@ -24,7 +28,7 @@ const PORT = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 const server = app.listen(PORT, function() {
   console.log(`Listening on Port ${PORT}`);
