@@ -39,6 +39,7 @@ app.use(cors());
 
 const server = app.listen(PORT, function() {
   console.log(`Listening on Port ${PORT}`);
+  console.log('This is a test')
 });
 
 const socketio = require("socket.io")(server);
