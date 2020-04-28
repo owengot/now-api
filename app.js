@@ -381,10 +381,8 @@ app.get("/messages", function(req, res) {
 });
 
 app.get("/rooms", function(req, res) {
-if (req.query.id == undefined) {
     res.send(db.get("rooms"));
-  }
-}
+})
 
 app.get("/room", function(req, res) {
 
