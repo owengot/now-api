@@ -28,7 +28,7 @@ const PORT = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 const server = app.listen(PORT, function() {
   console.log(`Listening on Port ${PORT}`);
@@ -369,7 +369,7 @@ var opts_choice = {
   //  }
 // });
 
-app.get("/messages", function(req, res) {
+app.get("/messages", cors(corsOptions), function(req, res) {
   if (req.query.id == undefined) {
     res.send(db.get("messages"));
   } else {
@@ -381,7 +381,7 @@ app.get("/messages", function(req, res) {
   }
 });
 
-app.get("/room", function(req, res) {
+app.get("/room", cors(corsOptions), function(req, res) {
 
     let roomId = req.query.id;
 
@@ -444,15 +444,15 @@ request(options, function (error, response, body) {
 
 });
 
-app.get("/channels", function(req, res) {
+app.get("/channels", cors(corsOptions), function(req, res) {
   res.send(db.get("channels"));
 });
 
-app.get("/groups", function(req, res) {
+app.get("/groups", cors(corsOptions), function(req, res) {
   res.send(db.get("groups"));
 });
 
-app.get("/users", function(req, res) {
+app.get("/users", cors(corsOptions), function(req, res) {
   if (req.query.id == undefined) {
     res.send(db.get("users"));
   } else {
@@ -510,11 +510,11 @@ async function getActiveUsers(n) {
 
 getActiveUsers(20);
 
-app.get("/users/edgeryders", function(req, res) {
+app.get("/users/edgeryders", cors(corsOptions), function(req, res) {
   res.send(allUsers);
 });
 
-app.post("/users", function(req, res) {
+app.post("/users", cors(corsOptions), function(req, res) {
   if (req.query.id == undefined) {
     return res.status(400).json({
       status: "error",
@@ -545,7 +545,7 @@ app.post("/users", function(req, res) {
   }
 });
 
-app.post("/channels", function(req, res) {
+app.post("/channels", cors(corsOptions), function(req, res) {
   if (req.query.delete !== undefined) {
     db.get("channels")
       .remove({ id: req.query.id })
@@ -590,7 +590,7 @@ app.post("/channels", function(req, res) {
   }
 });
 
-app.post("/groups", function(req, res) {
+app.post("/groups", cors(corsOptions), function(req, res) {
   if (req.query.delete !== undefined) {
     db.get("groups")
       .remove({ id: req.query.id })
@@ -624,7 +624,7 @@ app.post("/groups", function(req, res) {
   }
 });
 
-app.post("/bookmark", function(req, res) {
+app.post("/bookmark", cors(corsOptions), function(req, res) {
   if (req.query.id == undefined) {
     return res.status(400).json({
       status: "error",
@@ -659,7 +659,7 @@ app.post("/bookmark", function(req, res) {
   }
 });
 
-app.post("/notifications", function(req, res) {
+app.post("/notifications", cors(corsOptions), function(req, res) {
   if (req.query.id == undefined) {
     return res.status(400).json({
       status: "error",
@@ -690,7 +690,7 @@ app.post("/notifications", function(req, res) {
   }
 });
 
-app.post("/like", function(req, res) {
+app.post("/like", cors(corsOptions), function(req, res) {
   if (req.query.id == undefined) {
     return res.status(400).json({
       status: "error",
@@ -745,7 +745,7 @@ app.post("/like", function(req, res) {
     }
   }
 });
-app.post("/members/verify", function(req, res) {
+app.post("/members/verify", cors(corsOptions), function(req, res) {
   const user = req.body;
 
   var existingUser = db
